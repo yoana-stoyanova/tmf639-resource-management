@@ -13,5 +13,15 @@ public class ResourceObjectService {
     }
 
     public List<ResourceObject> XmlToJavaObject(String filepath){
+        //check if marshaller is faster than manually getting the attributes
     };
+
+    public List<ResourceObject> getAllResources(){
+        return resourceObjectRepository.findAll()
+    }
+
+    public ResourceObject getResourceById(Long id){
+        return resourceObjectRepository.findById(id);
+    }
 }
+
