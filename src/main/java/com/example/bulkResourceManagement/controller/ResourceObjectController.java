@@ -28,4 +28,11 @@ public class ResourceObjectController {
                 .map(converter::convert)
                 .collect(Collectors.toList());
     }
+
+    @GetMapping{"/{id}"}
+    Tmf639Resource getResourceById(@PathVariable Long id){
+        ResourceObject = resourceObjectService.getResourceById(id);
+        return converter.convert(ResourceObject);
+    }
 }
+
